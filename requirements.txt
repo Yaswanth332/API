@@ -4,4 +4,3 @@ python-dotenv==1.0.0
 pyjwt==2.8.0
 qiskit==0.44.1
 qiskit-aer==0.12.2
-smtplib==0.0.1
