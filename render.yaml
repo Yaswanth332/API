@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: quantum-otp-api
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn chatapp:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9.0
+      - key: SECRET_KEY
+        generateValue: true
+      - key: EMAIL_ADDRESS
+        fromSecret: true
+      - key: EMAIL_PASSWORD
+        fromSecret: true
