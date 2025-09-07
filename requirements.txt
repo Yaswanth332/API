@@ -7,3 +7,4 @@ qiskit-ibm-runtime==0.22.0
 qiskit-ibm-provider==0.8.0
 gunicorn==21.2.0
 requests==2.31.0
+numpy==1.24.3

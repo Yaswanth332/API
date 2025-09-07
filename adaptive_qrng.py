@@ -20,7 +20,7 @@ def adaptive_rotation_qrng(
     Real quantum random number generator using IBM Quantum Runtime
     """
     # Get IBM Quantum API token from environment
-    api_token = os.environ.get('IBM_QUANTUM_TOKEN')
+    api_token = os.environ.get('qrng_random_colllapse')
     
     if not api_token:
         print("⚠️ IBM Quantum token not found, using fallback")
