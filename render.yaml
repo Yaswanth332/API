@@ -4,13 +4,13 @@ services:
     env: python
     plan: free
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn chatapp:app
+    startCommand: gunicorn --bind 0.0.0.0:$PORT chatapp:app
     envVars:
       - key: SECRET_KEY
         generateValue: true
       - key: EMAIL_ADDRESS
-        fromSecret: EMAIL_ADDRESS
+        fromSecret: true
       - key: EMAIL_PASSWORD
-        fromSecret: EMAIL_PASSWORD
+        fromSecret: true
       - key: PYTHON_VERSION
         value: 3.11.4
