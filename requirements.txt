@@ -1,8 +1,7 @@
 flask==2.3.3
 flask-cors==4.0.0
 python-dotenv==1.0.0
-PyJWT==2.8.0
-qiskit-ibm-runtime==0.22.0  # Let this pull its own dependencies
-gunicorn==21.2.0
-requests==2.31.0
-numpy==1.24.3
+pyjwt==2.8.0
+qiskit==0.44.1
+qiskit-aer==0.12.2
+smtplib==0.0.1

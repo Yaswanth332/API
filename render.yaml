@@ -1,14 +1,16 @@
 services:
   - type: web
     name: quantum-otp-api
+    env: python
     plan: free
-    dockerfilePath: Dockerfile
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn chatapp:app
     envVars:
       - key: SECRET_KEY
         generateValue: true
       - key: EMAIL_ADDRESS
-        fromSecret: true
+        fromSecret: EMAIL_ADDRESS
       - key: EMAIL_PASSWORD
-        fromSecret: true
-      - key: IBM_QUANTUM_TOKEN
-        fromSecret: true
+        fromSecret: EMAIL_PASSWORD
+      - key: PYTHON_VERSION
+        value: 3.11.4
