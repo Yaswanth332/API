@@ -1,10 +1,8 @@
 services:
   - type: web
     name: quantum-otp-api
-    env: python
     plan: free
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn chatapp:app
+    dockerfilePath: Dockerfile
     envVars:
       - key: SECRET_KEY
         generateValue: true
